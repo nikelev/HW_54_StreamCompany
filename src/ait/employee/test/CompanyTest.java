@@ -2,6 +2,7 @@ package ait.employee.test;
 
 import ait.employee.dao.Company;
 import ait.employee.dao.CompanySetImpl;
+import ait.employee.dao.CompanyStreamImpl;
 import ait.employee.model.Employee;
 import ait.employee.model.Manager;
 import ait.employee.model.SalesManager;
@@ -20,7 +21,7 @@ class CompanyTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        company = new CompanySetImpl(5);
+        company = new CompanyStreamImpl(5);
         firm = new Employee[4];
         firm[0] = new Manager(1000, "John", "Smith", 160, 5000, 5);
         firm[1] = new WageEmployee(2000, "Ann", "Smith", 160, 15);

@@ -68,14 +68,14 @@ public class CompanySetImpl implements Company{
     // O(n)
     @Override
     public double totalSales() {
-//        double res = 0;
-//        for (Employee employee : employees) {
-//            if (employee instanceof SalesManager) {
-//                SalesManager salesManager = (SalesManager) employee;
-//                res += salesManager.getSalesValue();
-//            }
-//        }
-//        return res;
+        double res = 0;
+        for (Employee employee : employees) {
+            if (employee instanceof SalesManager) {
+                SalesManager salesManager = (SalesManager) employee;
+                res += salesManager.getSalesValue();
+            }
+        }
+        return res;
 
     }
 
@@ -98,16 +98,16 @@ public class CompanySetImpl implements Company{
     }
 
     private Employee[] findEmployeesByPredicate(Predicate<Employee> predicate) {
-//        List<Employee> res = new ArrayList<>();
-//        for (Employee employee : employees) {
-//            if (predicate.test(employee)) {
-//                res.add(employee);
-//            }
-//        }
-//        return res.toArray(new Employee[0]);
+        List<Employee> res = new ArrayList<>();
+        for (Employee employee : employees) {
+            if (predicate.test(employee)) {
+                res.add(employee);
+            }
+        }
+        return res.toArray(new Employee[0]);
 
-        return employees.stream()
-                .filter(predicate)
-                .toArray(Employee[]::new);
+//        return employees.stream()
+//                .filter(predicate)
+//                .toArray(Employee[]::new);
     }
 }

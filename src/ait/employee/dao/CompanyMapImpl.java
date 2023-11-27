@@ -3,7 +3,10 @@ package ait.employee.dao;
 import ait.employee.model.Employee;
 import ait.employee.model.SalesManager;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 public class CompanyMapImpl implements Company {
